@@ -37,3 +37,5 @@ object.contstructor = prototype
 can add to prototype with object.prototype.x = stuff || object.prototype = {new stuff} to overwrite
 
 f.prototype = { constructor: f }
+
+obj2 = new obj.constructor() creates object from instance of object without knowing it's constructor, if constructor hasn't been modified.
