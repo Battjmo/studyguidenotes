@@ -22,3 +22,18 @@ render queue: browser queue that gets blocked by the call stack. settimeout 0 al
 
 check out sprema
 
+
+
+##prototype
+
+All objects have a protoype, determines what manner of object they are and what functionality they have.
+
+object.prototype = other objects sets prototype
+
+prototype is a regular property, while [[Prototype]] indicateds inhertience
+
+object.contstructor = prototype
+
+can add to prototype with object.prototype.x = stuff || object.prototype = {new stuff} to overwrite
+
+f.prototype = { constructor: f }
