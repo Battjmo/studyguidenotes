@@ -52,3 +52,41 @@ pros
  can also check for orientation
  can hide elements, change fonts, all the good ish
   
+  ---
+  # Grid
+  
+  it makes grids, guy
+  
+  3x2 grid 2/ widths on columns, heights on rows:
+  
+  .wrapper {
+    display: grid;
+    grid-template-columns: 100px 100px 100px;
+    grid-template-rows: 50px 50px;
+}
+
+can create cell that aren't filled, they just won't show up until they are
+
+to mess with an individual item:
+
+.item1 {
+    grid-column-start: 1; // starts at beginning of column 1
+    grid-column-end: 4; // ends at beginning of column 4, which doesn't exist, but represents the end of column 3
+}
+
+can also be:
+
+.item1 {
+    grid-column: 1 / 4;
+}
+
+can be negative indexed too
+
+can also be define as a span:
+
+grid-column-start: 2
+grid-column-end: span 2
+
+two cell wide instruction
+
+can declare start a span to start from the end
