@@ -60,6 +60,8 @@ num vertices good for speed, not num edges
 
 without lists, o(n) for traversal
 
+### matrix
+
 storing vertices in adjaceny matrix much more efficient
 
 set boolean value in each square to true if there's an edge between those two vertices
@@ -77,4 +79,22 @@ using hash table to store vertices and indices is faster
 weighted graph use a giant number for unconnected nodes
 
 matrices bad for sparse
+
+### adjacency list 
+
+store indicies a node is connected to in a list for each node. BST, linked list, array all work. BST probably best.
+
+in c++ do an array of pointers to 1D array lists
+
+space o(edges), way better than matrix
+
+finding edge o(v), worse than matrix
+
+finding adjacent nodes o(v)
+
+linked lists are good for adding and removing speed, store pointers to heads of lists in an array, like a cache
+
+can store weights in nodes
+
+
 
