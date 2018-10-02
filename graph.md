@@ -60,3 +60,21 @@ num vertices good for speed, not num edges
 
 without lists, o(n) for traversal
 
+storing vertices in adjaceny matrix much more efficient
+
+set boolean value in each square to true if there's an edge between those two vertices
+
+undirect is symmetrical, can only go through half the matrix
+
+directed you gotta check 'em all
+
+scanning for adjacency is o(n) if we know name, constant if we know index
+
+finding if two nodes are connected constant
+
+using hash table to store vertices and indices is faster
+
+weighted graph use a giant number for unconnected nodes
+
+matrices bad for sparse
+
