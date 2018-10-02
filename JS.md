@@ -24,7 +24,7 @@ check out sprema
 
 
 
-##prototype
+## Prototype
 
 All objects have a protoype, determines what manner of object they are and what functionality they have.
 
@@ -39,3 +39,76 @@ can add to prototype with object.prototype.x = stuff || object.prototype = {new 
 f.prototype = { constructor: f }
 
 obj2 = new obj.constructor() creates object from instance of object without knowing it's constructor, if constructor hasn't been modified.
+
+
+## Closure
+
+allows a function to access variables from an eclosing scope even after it leaves the scope where it was declared
+
+lets a function act a lot more like a class without class syntax. returned functions can be called with object.function notation
+
+function SpringfieldSchool() {
+  let staff = ['Seymour Skinner', 'Edna Krabappel'];
+  return {
+    getStaff: function() { console.log(staff) },
+    addStaff: function(name) { staff.push(name) }
+  }
+}
+
+let elementary = SpringfieldSchool()
+console.log(elementary)        // { getStaff: ƒ, addStaff: ƒ }
+console.log(staff)             // ReferenceError: staff is not defined
+/* Closure allows access to the staff variable */
+elementary.getStaff()          // ["Seymour Skinner", "Edna Krabappel"]
+elementary.addStaff('Otto Mann')
+elementary.getStaff()  
+
+doesn't work:
+
+const arr = [10, 12, 15, 21];
+for (var i = 0; i < arr.length; i++) {
+  setTimeout(function() {
+    console.log(`The value ${arr[i]} is at index: ${i}`);
+  }, (i+1) * 1000);
+}
+
+works:
+
+const arr = [10, 12, 15, 21];
+for (let i = 0; i < arr.length; i++) {
+  setTimeout(function() {
+    console.log(`The value ${arr[i]} is at index: ${i}`);
+  }, (i) * 1000);
+}
+
+### IIFE: immediately invoked functional expression
+
+function called as it is defined.
+
+//doesn't work
+var result = [];
+for (var i=0; i < 5; i++) {
+  result.push( function() { return i } );
+}
+console.log( result[1]() ); // 5
+console.log( result[3]() ); // 5
+
+//works
+result = [];
+for (var i=0; i < 5; i++) {
+  (function () {
+    var j = i; // copy current value of i
+    result.push( function() { return j } );
+  })();
+}
+
+
+## Context
+
+what this is
+
+## Scope
+
+what variables can be accessed
+console.log( result[1]() ); // 1
+console.log( result[3]() ); // 3
