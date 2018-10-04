@@ -90,3 +90,27 @@ grid-column-end: span 2
 two cell wide instruction
 
 can declare start a span to start from the end
+
+## DNS
+
+domains name system, how ip addresses and domain name are stored and related.
+
+what your browser uses to find shit
+
+if it doesn't have it locally, asks isp
+
+if isp doesn't have it, asks Root servers
+
+they say verisign, usually
+
+so it queries versign
+
+query is sent tor elevant ip
+conetnt is served
+
+set up by IANA Internet assigned numbers authority
+and ICANN (Internet Corporation for Assigned Names and NUmbers)
+
+used to be par tof the government, now consortium of govts, telecoms, registrars, etc
+
+
