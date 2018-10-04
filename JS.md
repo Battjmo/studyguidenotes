@@ -112,3 +112,22 @@ what this is
 what variables can be accessed
 console.log( result[1]() ); // 1
 console.log( result[3]() ); // 3
+
+## React
+
+![react diagram](https://engineering.musefind.com/react-lifecycle-methods-how-and-when-to-use-them-2111a1b692b1)
+
+### lifecycle methods
+componentWillMount: component is about to show up. no DOM so it can't do much. connecting to APIs
+
+componentDidMount: component has just been created. where you do queries to update it. also drawing and adding listeners
+
+componentWillReceiveProps: you're getting new props, but still have the old ones. checked for changes and...react
+
+shouldCOmponentUpdate: similar to above, should always return boolean and improve performance by skipping updates if nothign relevant has changed
+
+componentWillUpdate: kinda useless, like willreceiveprops but can't set state.
+
+componentDidUpdate: updating DOM in response to prop or state changes
+
+componentWillUnmount: cancel request, remove event listeners, clean up in general
