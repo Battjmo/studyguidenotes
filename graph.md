@@ -98,3 +98,7 @@ can store weights in nodes
 
 
 
+### topo sort
+for dependency lists
+
+
