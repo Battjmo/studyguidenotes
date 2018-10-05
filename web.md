@@ -114,3 +114,11 @@ and ICANN (Internet Corporation for Assigned Names and NUmbers)
 used to be par tof the government, now consortium of govts, telecoms, registrars, etc
 
 
+Transmission Control Protocol, manages packet transmission. has layers:
+1. Applicaiton
+these two talk with ports
+2. transport (tcp udp)
+
+header put on each packet, so that receiver can check if it was received okay
+
+3. internet, puts destination and departure addresses, mac addresses
