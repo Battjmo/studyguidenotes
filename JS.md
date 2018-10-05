@@ -131,3 +131,16 @@ componentWillUpdate: kinda useless, like willreceiveprops but can't set state.
 componentDidUpdate: updating DOM in response to prop or state changes
 
 componentWillUnmount: cancel request, remove event listeners, clean up in general
+
+## this
+
+the object a function is concerned with.
+
+determined at runtime
+
+not bound until your assign it to something, and then only in that instance.
+
+if you're in strict and call soemthing without declaring this, you get undefined. otherwise you get hte top level scop, the window
+
+arrow methods have no this oftheir own, they draw it from the outside
+
